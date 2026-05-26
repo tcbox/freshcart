@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "dz:generate": "npx drizzle-kit generate",
+    "dz:migrate": "npx drizzle-kit migrate",
+    "dz:push": "npx drizzle-kit push",
+    "dz:studio": "npx drizzle-kit studio"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
