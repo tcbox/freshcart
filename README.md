@@ -35,9 +35,10 @@ FreshCart is a **learning-focused, production-ready** delivery platform designed
 ✅ **Real-Time Architecture** – WebSocket-based order tracking and instant notifications  
 ✅ **Secure Payment Processing** – PCI-compliant Razorpay integration  
 ✅ **Scalable Backend** – Microservices-ready with caching, queuing, and database optimization  
-✅ **Professional DevOps** – Docker containerization and cloud-ready deployments  
+✅ **Professional DevOps** – Docker containerization and cloud-ready deployments
 
 This is also my **personal engineering journey** to master:
+
 - System design and scalability patterns
 - Production-grade TypeScript architecture
 - Backend engineering fundamentals
@@ -49,6 +50,7 @@ This is also my **personal engineering journey** to master:
 ## 🚀 Features
 
 ### Core Functionality
+
 - 🔐 **User Authentication** – Secure JWT-based auth with refresh tokens
 - 🛒 **Smart Cart Management** – Real-time inventory sync, persistent carts
 - 📦 **Fruit & Salad Ordering** – Catalog with categories, filters, and search
@@ -56,6 +58,7 @@ This is also my **personal engineering journey** to master:
 - 📊 **Inventory Management** – Real-time stock tracking and low-stock alerts
 
 ### Advanced Features
+
 - 📱 **Admin Dashboard** – Order management, analytics, inventory control
 - ⚡ **Real-Time Notifications** – WebSocket-based order status updates
 - 🔄 **Background Jobs** – Order processing, invoice generation, email notifications
@@ -67,29 +70,32 @@ This is also my **personal engineering journey** to master:
 ## 💻 Tech Stack
 
 ### **Frontend**
-| Tech | Version | Purpose |
-|------|---------|---------|
-| React | 19.2.4 | UI Components & State Management |
-| Next.js | 16.2.6 | Framework, SSR, API Routes |
-| TypeScript | 5+ | Type Safety |
-| TailwindCSS | 4 | Styling & Responsive Design |
+
+| Tech        | Version | Purpose                          |
+| ----------- | ------- | -------------------------------- |
+| React       | 19.2.4  | UI Components & State Management |
+| Next.js     | 16.2.6  | Framework, SSR, API Routes       |
+| TypeScript  | 5+      | Type Safety                      |
+| TailwindCSS | 4       | Styling & Responsive Design      |
 
 ### **Backend**
-| Tech | Version | Purpose |
-|------|---------|---------|
-| Node.js | 20+ | Runtime |
-| Express | 5.2.1 | API Framework |
-| TypeScript | 5+ | Type Safety |
-| Zod | 4.4.3 | Schema Validation |
-| PostgreSQL | Latest | Primary Database |
-| Redis | Latest | Caching & Message Queue |
+
+| Tech       | Version | Purpose                 |
+| ---------- | ------- | ----------------------- |
+| Node.js    | 20+     | Runtime                 |
+| Express    | 5.2.1   | API Framework           |
+| TypeScript | 5+      | Type Safety             |
+| Zod        | 4.4.3   | Schema Validation       |
+| PostgreSQL | Latest  | Primary Database        |
+| Redis      | Latest  | Caching & Message Queue |
 
 ### **DevOps & Tools**
-| Tool | Purpose |
-|------|---------|
-| Docker | Containerization |
-| ESLint | Code Quality |
-| TypeScript Compiler | Type Checking |
+
+| Tool                | Purpose          |
+| ------------------- | ---------------- |
+| Docker              | Containerization |
+| ESLint              | Code Quality     |
+| TypeScript Compiler | Type Checking    |
 
 ---
 
@@ -220,13 +226,13 @@ freshcart/
 
 ### **Directory Purpose Summary**
 
-| Directory | Purpose |
-|-----------|---------|
-| `src/app/` | Next.js 13+ app directory (pages, layouts, API routes) |
-| `src/backend/` | Backend business logic (controllers, services, repositories) |
-| `src/frontend/` | Frontend React components (UI, features, hooks) |
-| `src/lib/` | Shared utilities, types, validations, config |
-| `public/` | Static assets (images, icons, fonts) |
+| Directory       | Purpose                                                      |
+| --------------- | ------------------------------------------------------------ |
+| `src/app/`      | Next.js 13+ app directory (pages, layouts, API routes)       |
+| `src/backend/`  | Backend business logic (controllers, services, repositories) |
+| `src/frontend/` | Frontend React components (UI, features, hooks)              |
+| `src/lib/`      | Shared utilities, types, validations, config                 |
+| `public/`       | Static assets (images, icons, fonts)                         |
 
 ---
 
@@ -249,14 +255,14 @@ freshcart/
 
 ### **Dependency Details**
 
-| Package | Version | Purpose | Why Included |
-|---------|---------|---------|-------------|
-| **next** | 16.2.6 | Full-stack React framework | SSR, API routes, automatic optimization, file-based routing |
-| **react** | 19.2.4 | UI library | Component-based UI development, hooks, state management |
-| **react-dom** | 19.2.4 | React rendering | DOM manipulation and component rendering |
-| **express** | 5.2.1 | Backend API framework | HTTP server, middleware, routing for backend services |
-| **zod** | 4.4.3 | Schema validation | Runtime type checking, API request validation, type inference |
-| **dotenv** | 17.4.2 | Environment config | Load .env variables safely into process.env |
+| Package       | Version | Purpose                    | Why Included                                                  |
+| ------------- | ------- | -------------------------- | ------------------------------------------------------------- |
+| **next**      | 16.2.6  | Full-stack React framework | SSR, API routes, automatic optimization, file-based routing   |
+| **react**     | 19.2.4  | UI library                 | Component-based UI development, hooks, state management       |
+| **react-dom** | 19.2.4  | React rendering            | DOM manipulation and component rendering                      |
+| **express**   | 5.2.1   | Backend API framework      | HTTP server, middleware, routing for backend services         |
+| **zod**       | 4.4.3   | Schema validation          | Runtime type checking, API request validation, type inference |
+| **dotenv**    | 17.4.2  | Environment config         | Load .env variables safely into process.env                   |
 
 ---
 
@@ -279,16 +285,16 @@ freshcart/
 
 ### **Development Dependency Details**
 
-| Package | Version | Purpose | Why Included |
-|---------|---------|---------|-------------|
-| **typescript** | 5+ | Language & type checking | Type safety, better IDE support, compile-time error detection |
-| **tailwindcss** | 4 | Utility-first CSS | Rapid UI development, consistent design, responsive utilities |
-| **@tailwindcss/postcss** | 4 | PostCSS plugin | Processes Tailwind CSS directives |
-| **eslint** | 9 | Code quality & linting | Catches bugs, enforces code standards, consistency |
-| **eslint-config-next** | 16.2.6 | ESLint for Next.js | Next.js-specific linting rules |
-| **@types/node** | 20+ | TypeScript definitions | Type information for Node.js APIs |
-| **@types/react** | 19 | TypeScript React types | Type information for React components |
-| **@types/react-dom** | 19 | TypeScript React DOM types | Type information for React DOM |
+| Package                  | Version | Purpose                    | Why Included                                                  |
+| ------------------------ | ------- | -------------------------- | ------------------------------------------------------------- |
+| **typescript**           | 5+      | Language & type checking   | Type safety, better IDE support, compile-time error detection |
+| **tailwindcss**          | 4       | Utility-first CSS          | Rapid UI development, consistent design, responsive utilities |
+| **@tailwindcss/postcss** | 4       | PostCSS plugin             | Processes Tailwind CSS directives                             |
+| **eslint**               | 9       | Code quality & linting     | Catches bugs, enforces code standards, consistency            |
+| **eslint-config-next**   | 16.2.6  | ESLint for Next.js         | Next.js-specific linting rules                                |
+| **@types/node**          | 20+     | TypeScript definitions     | Type information for Node.js APIs                             |
+| **@types/react**         | 19      | TypeScript React types     | Type information for React components                         |
+| **@types/react-dom**     | 19      | TypeScript React DOM types | Type information for React DOM                                |
 
 ---
 
@@ -299,20 +305,21 @@ freshcart/
 ```json
 {
   "compilerOptions": {
-    "target": "ES2017",              // JavaScript target version
+    "target": "ES2017", // JavaScript target version
     "lib": ["dom", "dom.iterable", "esnext"],
-    "strict": true,                  // Enable strict type checking
-    "jsx": "react-jsx",              // JSX compilation mode
-    "moduleResolution": "bundler",   // Module resolution strategy
-    "resolveJsonModule": true,       // Allow importing JSON files
+    "strict": true, // Enable strict type checking
+    "jsx": "react-jsx", // JSX compilation mode
+    "moduleResolution": "bundler", // Module resolution strategy
+    "resolveJsonModule": true, // Allow importing JSON files
     "paths": {
-      "@/*": ["./src/*"]             // Path alias for cleaner imports
+      "@/*": ["./src/*"] // Path alias for cleaner imports
     }
   }
 }
 ```
 
 **Key Configuration:**
+
 - ✅ Strict mode enabled for maximum type safety
 - ✅ Path alias `@/*` for cleaner imports (`import { Button } from '@/components'`)
 - ✅ ES2017 target for modern JavaScript features
@@ -333,6 +340,7 @@ export default nextConfig;
 ```
 
 **Ready for:**
+
 - Custom Webpack configuration
 - Environment-specific settings
 - API proxy configuration
@@ -350,19 +358,15 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
 const eslintConfig = defineConfig([
-  ...nextVitals,      // Web performance best practices
-  ...nextTs,          // TypeScript rules
+  ...nextVitals, // Web performance best practices
+  ...nextTs, // TypeScript rules
   // Custom ignores
-  globalIgnores([
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
 ```
 
 **Features:**
+
 - ✅ Next.js best practices enforced
 - ✅ TypeScript linting rules
 - ✅ Web Vitals optimization checks
@@ -374,17 +378,16 @@ const eslintConfig = defineConfig([
 
 ```javascript
 module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 **Features:**
+
 - ✅ Production-safe purging (unused styles removed)
 - ✅ Just-In-Time (JIT) compilation
 - ✅ Responsive design utilities
@@ -401,10 +404,11 @@ export default {
     tailwindcss: {},
     autoprefixer: {},
   },
-}
+};
 ```
 
 **Features:**
+
 - ✅ Tailwind CSS processing
 - ✅ Autoprefixer for vendor prefixes
 - ✅ Cross-browser compatibility
@@ -515,6 +519,7 @@ Response → Cache (if applicable) → API Route → Frontend → UI Update
 ## 🎯 Quick Start
 
 ### **Prerequisites**
+
 - Node.js 20+
 - npm or yarn
 - Git
@@ -548,6 +553,7 @@ npm run dev
 ```
 
 The application will be available at:
+
 - **Frontend:** `http://localhost:3000`
 - **API:** `http://localhost:3000/api`
 
@@ -592,16 +598,17 @@ freshcart/
 
 FreshCart is architected to support:
 
-| Metric | Target | Strategy |
-|--------|--------|----------|
-| **Concurrent Users** | 25K+ | Load balancing, horizontal scaling |
-| **Active Sessions** | 10K+ | Redis session store, connection pooling |
-| **API Response Time** | <100ms (p95) | Query optimization, caching |
-| **Uptime** | 99.9% | Redundancy, health checks, monitoring |
-| **Daily Orders** | 100K+ | Database optimization, sharding |
-| **Requests/Second** | 5K+ | Rate limiting, async processing |
+| Metric                | Target       | Strategy                                |
+| --------------------- | ------------ | --------------------------------------- |
+| **Concurrent Users**  | 25K+         | Load balancing, horizontal scaling      |
+| **Active Sessions**   | 10K+         | Redis session store, connection pooling |
+| **API Response Time** | <100ms (p95) | Query optimization, caching             |
+| **Uptime**            | 99.9%        | Redundancy, health checks, monitoring   |
+| **Daily Orders**      | 100K+        | Database optimization, sharding         |
+| **Requests/Second**   | 5K+          | Rate limiting, async processing         |
 
 **Optimization Strategies:**
+
 - Database indexing and query optimization
 - Redis caching for frequently accessed data
 - API rate limiting and request throttling
@@ -627,7 +634,7 @@ This project emphasizes **production-grade practices**:
 ✅ **DevOps** – Docker, CI/CD ready, environment management  
 ✅ **Code Quality** – ESLint, Prettier, consistent conventions  
 ✅ **Error Handling** – Global error boundaries, proper HTTP status codes  
-✅ **Logging** – Structured logging, monitoring integration  
+✅ **Logging** – Structured logging, monitoring integration
 
 ---
 
@@ -636,19 +643,22 @@ This project emphasizes **production-grade practices**:
 **Current Phase:** 🔄 Active Development | **Version:** 0.1.0
 
 ### **✅ Completed**
+
 - [x] Project setup & scaffolding
 - [x] Tech stack integration (Next.js, React, Express, TypeScript)
 - [x] Folder structure design
 - [x] Configuration setup (tsconfig, eslint, tailwind, postcss)
 - [x] README documentation
+- [x] Database schema & migrations
 
 ### **🔄 In Progress**
+
 - [ ] Core backend APIs
 - [ ] Authentication system
-- [ ] Database schema & migrations
 - [ ] Frontend UI components
 
 ### **📋 TODO**
+
 - [ ] Product catalog with filters
 - [ ] Cart management system
 - [ ] Payment integration (Razorpay)
@@ -663,6 +673,7 @@ This project emphasizes **production-grade practices**:
 ## 🚀 Future Roadmap
 
 ### **Phase 1: MVP** (Next 2-3 months)
+
 - [ ] Complete REST API endpoints (auth, products, orders)
 - [ ] Implement user authentication (JWT)
 - [ ] Build product catalog with filters & search
@@ -672,6 +683,7 @@ This project emphasizes **production-grade practices**:
 - [ ] Database schema & migrations
 
 ### **Phase 2: Enhancement** (Months 4-6)
+
 - [ ] WebSocket real-time tracking
 - [ ] AI-based product recommendations
 - [ ] Analytics dashboard
@@ -681,6 +693,7 @@ This project emphasizes **production-grade practices**:
 - [ ] Subscription management
 
 ### **Phase 3: Scale** (Months 7+)
+
 - [ ] Subscription delivery system
 - [ ] Mobile app (React Native)
 - [ ] Kubernetes deployment
@@ -695,6 +708,7 @@ This project emphasizes **production-grade practices**:
 ## 🤝 Contributing
 
 As this is a personal learning project, contributions are limited to structured feedback. Feel free to:
+
 - 📝 Open issues for bugs or suggestions
 - 💬 Discuss architecture decisions
 - 🔍 Provide code reviews and feedback
@@ -704,6 +718,7 @@ As this is a personal learning project, contributions are limited to structured 
 ## 📚 Learning Resources
 
 This project implements patterns from:
+
 - **System Design:** "System Design Interview" by Alex Xu
 - **Performance:** "High-Performance Browser Networking" by Ilya Grigorik
 - **Best Practices:** The Twelve-Factor App methodology
