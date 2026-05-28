@@ -1,6 +1,8 @@
 import type { Request, Response } from "express";
 import express from "express";
 import { env } from "./lib/config/env";
+import { checkConnection } from "./backend/database/connection";
+import authRouter from "./backend/routes/authRoutes";
 
 const PORT = env.PORT || 3002;
 const app = express();
@@ -11,6 +13,9 @@ app.get("/", (req: Request, res: Response) => {
   res.json({ message: "homepage" });
 });
 
-app.listen(PORT, () => {
+app.use("/api/auth", authRouter);
+
+app.listen(PORT, async () => {
+  await checkConnection();
   console.log(`Server running on http://localhost:${PORT}`);
 });

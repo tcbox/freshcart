@@ -1,35 +1,18 @@
+import { eq, and, isNull } from "drizzle-orm";
 import { db } from "../database/connection";
 import { users } from "../database/schema";
 
-type partialUser = Partial<typeof users.$inferInsert>;
-
-const createUser = async (data: partialUser) => {
-  const newuser = data;
-  console.log("result 1", newuser);
-
-  return newuser;
-};
-
-const findByEmail = async (email: string) => {};
-const findByid = async () => {};
-
 export const userRepository = {
-  createUser,
-  findByEmail,
-  findByid,
+  async createUser(data: typeof users.$inferInsert) {
+    const [newUser] = await db.insert(users).values(data).returning();
+    return newUser;
+  },
+
+  async findByEmail(email: string) {
+    const [user] = await db
+      .select()
+      .from(users)
+      .where(and(eq(users.email, email), isNull(users.deletedAt)));
+    return user;
+  },
 };
-
-const test = async () => {
-  const result = await createUser({
-    firstName: "Tinku",
-    lastName: "Candy",
-    email: "tinku@gmail.com",
-    phone: "9999999999",
-    passwordHash: "hashed-password",
-  });
-
-  console.log("result", result);
-  console.log(Array.isArray(result));
-};
-
-test();
