@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { authService } from "../services/authService";
-import { string } from "zod";
 
 export const authController = {
   // 1. User Registration Handler

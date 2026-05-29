@@ -1,6 +1,6 @@
 import { eq, and, isNull } from "drizzle-orm";
 import { db } from "../database/connection";
-import { users } from "../database/schema";
+import { products, users } from "../database/schema";
 
 export const userRepository = {
   async createUser(data: typeof users.$inferInsert) {
@@ -14,5 +14,13 @@ export const userRepository = {
       .from(users)
       .where(and(eq(users.email, email), isNull(users.deletedAt)));
     return user;
+  },
+
+  async findProductByitemId(id: string) {
+    const [ProductByItemId] = await db
+      .select()
+      .from(products)
+      .where(eq(products.id, id));
+    return ProductByItemId;
   },
 };
