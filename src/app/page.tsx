@@ -1,7 +1,9 @@
+import Homepage from "../frontend/components/homepage";
+
 export default function Home() {
   return (
     <div>
-      <div>hello</div>
+      <Homepage />
     </div>
   );
 }
