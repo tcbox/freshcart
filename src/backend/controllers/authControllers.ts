@@ -16,7 +16,6 @@ export const authController = {
         return;
       }
 
-      // Trigger business process layer
       const user = await authService.registerUser(
         email,
         phone,
@@ -25,7 +24,7 @@ export const authController = {
         lastName,
       );
 
-      // System Success Output Response (Never return passwordHash to client!)
+     
       res.status(201).json({
         success: true,
         message: "User registered successfully!",

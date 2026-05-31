@@ -8,6 +8,7 @@ const EnvSchema = z.object({
   PORT: z.string().default("3000"),
   DATABASE_URL: z.string().url("Vaild Database Url is missing!"),
   TEST_MODE: z.string().default("false"),
+  LOCAL_HOST: z.string().url(),
 });
 
 const parsedEnv = EnvSchema.safeParse(process.env);
