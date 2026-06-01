@@ -6,7 +6,7 @@ const EnvSchema = z.object({
     .enum(["development", "production", "test"])
     .default("development"),
   PORT: z.string().default("3000"),
-  DATABASE_URL: z.string().url("Vaild Database Url is missing!"),
+  DATABASE_URL: z.string().url("Valid Database Url is missing!"),
   TEST_MODE: z.string().default("false"),
   LOCAL_HOST: z.string().url(),
 });
@@ -14,7 +14,7 @@ const EnvSchema = z.object({
 const parsedEnv = EnvSchema.safeParse(process.env);
 
 if (!parsedEnv.success) {
-  console.error("❌ Invaild enviromental variable");
+  console.error("❌ Invalid environment variable");
   console.log(parsedEnv.error.format(), parsedEnv.error.message);
   process.exit(1);
 }
