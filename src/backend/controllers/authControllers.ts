@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { authService } from "../services/authService";
-import { asyncHandler } from "@/src/utility/utils/AsyncHandler";
+import { asyncHandler } from "@/src/utility/config/AsyncHandler";
 
 export const register = asyncHandler(
   async (req: Request, res: Response): Promise<void> => {

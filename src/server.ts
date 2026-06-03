@@ -22,6 +22,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/auth", authRouter);
+app.use(middleware)
 
 app.listen(PORT, async () => {
   await checkConnection();

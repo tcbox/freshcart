@@ -1,9 +1,8 @@
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import { userRepository } from "../repository/userRepository";
-import { env } from "@/utility/config/env";
-import { SALT_ROUNDS } from "@/src/utility/constants/constants";
+import { SALT_ROUNDS, STATUS_CODE } from "@/src/utility/constants/constants";
 import { RegisterDTO } from "@/src/utility/types/types";
+import { ApiError } from "@/src/utility/config/AppError";
 
 export const authService = {
   async registerUser(data: RegisterDTO) {
@@ -11,9 +10,8 @@ export const authService = {
 
     const existingUser = await userRepository.findByEmail(email);
 
-    if (existingUser) {
-      throw new Error("User with this email already exists!");
-    }
+    if (existingUser)
+      throw new ApiError("User is not found", STATUS_CODE.NOT_FOUND);
 
     const passwordHash = await bcrypt.hash(passwordPlain, SALT_ROUNDS);
 
