@@ -1,28 +1,29 @@
 import type { Request, Response } from "express";
 import express from "express";
-import { env } from "./lib/config/env";
+import { env } from "./utility/config/env";
 import { checkConnection } from "./backend/database/connection";
 import authRouter from "./backend/routes/authRoutes";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 
 const PORT = env.PORT || 3002;
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use(
   cors({
     origin: env.LOCAL_HOST,
-    credentials: !env.TEST_MODE,
+    credentials: true,
   }),
 );
 
 app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "homepage" });
+  res.json({ message: "API server is running" });
 });
 
 app.use("/api/auth", authRouter);
-app.use(middleware)
 
 app.listen(PORT, async () => {
   await checkConnection();

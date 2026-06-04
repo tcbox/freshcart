@@ -9,6 +9,7 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().url("Valid Database Url is missing!"),
   TEST_MODE: z.string().default("false"),
   LOCAL_HOST: z.string().url(),
+  JWT_SECRET: z.string().default("your-super-secret-jwt-key-change-this"),
 });
 
 const parsedEnv = EnvSchema.safeParse(process.env);
