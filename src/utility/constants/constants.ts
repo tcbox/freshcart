@@ -33,3 +33,14 @@ export const STATUS_CODE = {
   SERVICE_UNAVAILABLE: 503,
   GATEWAY_TIMEOUT: 504,
 } as const;
+
+export const getFileUrl = () => {
+  const path = new URL(import.meta.url);
+  return {
+    url: `url :=> ${path}`,
+    href: `href :=> ${path.href}`,
+    pathname: `Pathname :=> ${path.pathname}`,
+  };
+};
+
+export const find_Path_Name = () => import.meta.url;

@@ -1,5 +1,6 @@
 import { z } from "zod";
 import "dotenv/config";
+import { find_Path_Name } from "../constants/constants";
 
 const EnvSchema = z.object({
   NODE_ENV: z
@@ -21,3 +22,5 @@ if (!parsedEnv.success) {
 }
 
 export const env = parsedEnv.data;
+
+console.log(env.DATABASE_URL, find_Path_Name());
